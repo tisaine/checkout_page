@@ -1,0 +1,121 @@
+body {
+	width: 100%;
+}
+
+a.navbar-brand {
+    align-items: center;
+}
+
+.container {
+    margin-top:50px;
+    margin-bottom: 50px;
+
+}
+
+.nav-nav li a {
+    color: white;
+}
+
+.flex-container {
+	width: 800px;
+	margin: auto;
+	align-items: center;
+}
+
+.flex-container div{
+  background-color: #e8fafc;
+  display: flex;
+  width: 800px;
+  height: 50px;
+  margin: auto;
+  padding-left: 10px;
+  align-items: center;
+  text-align: center;
+  line-height: 75px;
+  font-size: 16px;
+  border-radius: .25rem;
+  font-weight: 10;
+
+}
+
+.progressbar {
+	counter-reset: step;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin: auto;
+}
+
+.progressbar li {
+	list-style-type: none;
+	float: left;
+	width: 33.33%;
+	position: relative;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border: 2px solid #ddd;
+	display: block;
+	text-align: center;
+	margin: 0 auto 10px auto;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.progressbar li:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #ddd;
+	top: 30px;
+	left: -50%;
+	z-index: -1;
+}
+
+.progressbar li:first-child:after {
+	content: none;
+}
+
+.progressbar li.active {
+	color: green;
+}
+
+.progressbar li.active:before{
+	border-color: green;
+}
+
+.progressbar li.active + li:after {
+	background-color: green;
+}
+
+.payment-method {
+	width: 800px;
+	margin: auto;
+	padding-top: 40px;
+}
+
+.btn {
+	/*width: 100px;*/
+	margin: auto;
+}
+
+.footer {
+	padding-top: 10rem;
+}
+
+.page-footer a {
+  color: white;
+
+}
+
+.page-footer h6.text-uppercase {
+	color: white;
+}
+

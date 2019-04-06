@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="text/javascript" href="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+
+    <script src="scripts/main.js"></script>
+   
+    <title>Checkout page</title>
+  </head>
+  <body>
+<!--Navbar-->
+    <nav class="navbar bg-info navbar-dark">
+      <div class="container mb-4">
+        <a href="https://meetingpackage.com/fi" target="_blank" class="navbar-brand"><img src=".//imgs/Logo.png" alt="Meeting package logo"></a>
+      </div>
+    <!-- Language dropdown -->
+    <nav class="nav-nav bg-info justify-content-end">
+    <li class="nav-link">
+      <a class="nav-link user" href="#">Login name</a>
+    </li>
+    <li class="nav-link dropdown">
+      <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Language
+      </button>
+      <div class="dropdown-menu bg-info" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Suomi</a>
+        <a class="dropdown-item" href="#">English</a>
+        <a class="dropdown-item" href="#">Svenska</a>
+      </li> 
+    </div>
+    </nav>
+    </nav>
+    <!--Progress bar -->
+    <div class="container">
+      <ul class="progressbar">
+        <li class="active">Choose</li>
+        <li class="active">Contact info</li>
+        <li>Summary</li>
+      </ul>
+    </div>
+
+    <!-- Booking details -->
+    <div class="flex-container">
+      <div><h3>Order details
+        <span class="price"><i class="fa fa-shopping-cart"></i>
+        </span>        
+        </h3></div>
+      <div>Your items:
+        <b>1</b>      
+      </div>
+      <div>Description: Meeting room / venue</div>
+      <div>Date and Time: Friday, February 14, 2019 - 09:00 to 17:00</div>
+      <div>Price: 550 €</div>
+    </div>
+
+    <!--Container that includes input form-->
+    <div class="container">
+      <form action="summary.html" method="post" style="width: 800px; margin: auto;" >
+      <div class="contactForm mb-3">
+        <label for="firstName"> First Name </label>    
+        <input type="name" class="form-control" id="firstName" placeholder="First name here">
+        <label for="lastName"> Last Name </label>    
+        <input type="name" class="form-control" id="lastName" placeholder="Last name here">
+      </div>
+      <div class="form-group">
+        <label for="emailForm">Email address</label>
+        <input type="email" class="form-control" id="emailForm" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="companyForm">Company</label>
+        <input type="name" class="form-control" id="companyForm" placeholder="Company name here">
+      </div>  
+      <div class="form-group">
+        <label for="formTextarea">Example textarea</label>
+        <textarea class="form-control" id="formTextarea" rows="3"></textarea>
+      </div>
+      <!-- Agreement -->
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember" required> I agree text here.
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Check this checkbox to continue.</div>
+        </label>
+      </div>
+
+    <!-- Payment method here? -->
+    <div class="payment-method">
+    <h4 class="mb-3">Payment</h4>
+      <div class="d-block my-3">
+        <div class="custom-control custom-radio">
+          <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+            <label class="custom-control-label" for="credit">Credit card</label>
+        </div>
+      <div class="custom-control custom-radio">
+          <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="debit">Debit card</label>
+      </div>
+      <div class="custom-control custom-radio">
+         <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+          <label class="custom-control-label" for="paypal">Paypal</label>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="cc-name">Name on card</label>
+            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                 Name on card is required
+              </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="cc-number">Credit card number</label>
+            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+               Credit card number is required
+            </div>
+        </div>
+        </div>
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="cc-expiration">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+              Expiration date required
+            </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="cc-expiration">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                  <div class="invalid-feedback">
+                  Security code required
+                  </div>
+            </div>
+            </div>
+              <hr class="mb-4">  
+          <!-- Next button -->
+          <button type="submit" class="btn bg-info">Next</button>          
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <div class="footer">
+    <footer class="page-footer font-small bg-info pt-4">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+          <!-- Footer links -->
+          <div class="row text-center text-md-left mt-3 pb-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <div class="company-logo mb-4"
+              <a href="https://meetingpackage.com/fi" target="_blank">
+                <img src=".//imgs/Logo.png" alt="Meeting package logo"></a>
+              </div>
+            </div>
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Solutions</h6>
+              <p>
+                <a href="#!">Hotel Chains</a>
+              </p>
+              <p>
+                <a href="#!">Independent Hotels</a>
+              </p>
+              <p>
+                <a href="#!">Partners</a>
+              </p>
+              <p>
+                <a href="#!">Unique Venues and Event spaces</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+              <p>
+                <a href="#!">Online booking Engine</a>
+              </p>
+              <p>
+                <a href="#!">Global Distribution System</a>
+              </p>
+              <p>
+                <a href="#!">Integrations</a>
+              </p>
+              <p>
+                <a href="#!">Analytics</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">More</h6>
+                  <p>
+                <a href="#!">Company</a>
+              </p>
+              <p>
+                <a href="#!">Contact</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Footer line after links -->
+          <hr>
+          <!-- Grid row -->
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8">
+              <!--Copyright-->
+              <p class="text-center text-md-left">© 2019 Copyright text
+                <a href="#!">
+                  <strong> Company email here</strong>
+                </a>
+              </p>
+            </div>        
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+              <!-- Social buttons -->
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>        
+          </div>     
+        </div>
+    </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
